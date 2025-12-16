@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdelSAT - Premium Entertainment & Sports Streaming</title>
+    <meta name="description" content="Experience premium IPTV streaming with access to 15,000+ live channels, VOD content, sports, and entertainment. Subscribe now for the ultimate viewing experience!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adelsat.com/">
+    <meta property="og:title" content="AdelSAT - Premium IPTV Service">
+    <meta property="og:description" content="Access 15,000+ live channels, 4K sports, and VOD. The #1 rated IPTV service for stability and quality.">
+    <meta property="og:image" content="images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://adelsat.com/">
+    <meta property="twitter:title" content="AdelSAT - Premium IPTV Service">
+    <meta property="twitter:description" content="Access 15,000+ live channels, 4K sports, and VOD. The #1 rated IPTV service for stability and quality.">
+    <meta property="twitter:image" content="images/logo.png">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movies-sports-grid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="AdelSAT Logo" class="logo-image">
+                </div>
+
+                <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" role="button" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+                        <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <!-- Language Switcher Dropdown -->
+                    <div class="language-dropdown">
+                        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
+                            🌐 <span class="current-lang">EN</span> ▼
+                        </button>
+                        <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+                            <button class="lang-option" data-lang="en" role="menuitem">🇬🇧 English</button>
+                            <button class="lang-option" data-lang="fr" role="menuitem">🇫🇷 Français</button>
+                            <button class="lang-option" data-lang="ar" role="menuitem">🇸🇦 العربية</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+                <source src="videos/can.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge" data-i18n="hero.badge">🏆 Premium IPTV Service</div>
+                    <h1 class="hero-title">
+                        <span class="title-line1" data-i18n="hero.title1">Experience Entertainment</span>
+                        <span class="title-line2 gradient-text" data-i18n="hero.title2">Like Never Before</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">
+                        Access 15,000+ live TV channels, movies, series, and sports from around the world. Crystal clear quality, zero buffering, ultimate satisfaction.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" id="channelsCount">15,000</div>
+                            <div class="stat-label" data-i18n="hero.statChannels">Premium Channels</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="showsCount">17,200</div>
+                            <div class="stat-label" data-i18n="hero.statShows">TV Shows</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="moviesCount">68,000</div>
+                            <div class="stat-label" data-i18n="hero.statMovies">Movies</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#pricing" class="btn btn-primary" data-i18n="hero.btnPrimary">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Streaming Platforms Section -->
+    <section class="content-showcase platforms-showcase">
+        <div class="container">
+            <div class="showcase-header-large">
+                <h2 class="showcase-title-main" data-i18n="topPrograms.title">TOP PROGRAMS</h2>
+                <p class="showcase-description" data-i18n="topPrograms.description">From blockbuster movies and hit original series to live Premier League matches and action-packed sports, CANAL+ brings you the most-watched programs in one place. Whether you're into thrilling drama, family favorites, or world-class football—</p>
+                <h3 class="showcase-subtitle-italic" data-i18n="topPrograms.subtitle">Best streaming platforms</h3>
+            </div>
+            <div class="swiper platforms-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/hulu.png" alt="Hulu Content" class="platform-bg-image">
+                            <div class="platform-gradient hulu-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg hulu-logo">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="28" font-weight="bold">hulu</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/max.png" alt="HBO Max Content" class="platform-bg-image">
+                            <div class="platform-gradient hbomax-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 60" class="platform-logo-svg hbomax-logo">
+                                    <text x="60" y="25" text-anchor="middle" fill="white" font-size="24" font-weight="bold">HBO</text>
+                                    <text x="60" y="48" text-anchor="middle" fill="white" font-size="22" font-weight="bold">max</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/netflix.png" alt="Netflix Content" class="platform-bg-image">
+                            <div class="platform-gradient netflix-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg netflix-logo">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="26" font-weight="bold">NETFLIX</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/tubi.png" alt="Tubi Content" class="platform-bg-image">
+                            <div class="platform-gradient tubi-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="32" font-weight="900" style="font-family: sans-serif;">tubi</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/peacock.png" alt="Peacock Content" class="platform-bg-image">
+                            <div class="platform-gradient peacock-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="24" font-weight="bold" letter-spacing="1">peacock</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/atv.png" alt="Apple TV+ Content" class="platform-bg-image">
+                            <div class="platform-gradient atv-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="22" font-weight="bold">tv+</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/fubo.png" alt="Fubo TV Content" class="platform-bg-image">
+                            <div class="platform-gradient fubo-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="28" font-weight="900" style="font-style: italic;">fubo</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/prime.png" alt="Prime Video Content" class="platform-bg-image">
+                            <div class="platform-gradient prime-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 50" class="platform-logo-svg prime-logo">
+                                    <text x="60" y="24" text-anchor="middle" fill="white" font-size="20" font-weight="bold">prime</text>
+                                    <text x="60" y="44" text-anchor="middle" fill="white" font-size="18" font-weight="600">video</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="platform-content-card">
+                            <img src="images/disney.png" alt="Disney+ Content" class="platform-bg-image">
+                            <div class="platform-gradient disney-gradient"></div>
+                            <div class="platform-logo-overlay">
+                                <svg viewBox="0 0 120 40" class="platform-logo-svg disney-logo">
+                                    <text x="60" y="30" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Disney+</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Movies Section -->
+    <section class="content-showcase movies-showcase">
+        <div class="container">
+            <h2 class="section-title-simple section-title-italic" data-i18n="movies.title">MOVIES AND SERIES</h2>
+            <div class="swiper movies-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/movies.png" alt="Action Movie" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/series.png" alt="Thriller" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/animes.png" alt="Drama" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/girly.png" alt="Adventure" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/movies1.png" alt="Comedy" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/film.png" alt="Film" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/film2.png" alt="Film2" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/film3.png" alt="Film3" class="movie-poster">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-card">
+                            <img src="images/film4.png" alt="Film4" class="movie-poster">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Events Section -->
+    <section class="content-showcase sports-showcase">
+        <div class="container">
+            <h2 class="section-title-simple" data-i18n="sportsShowcase.title">SPORTS</h2>
+            <div class="swiper sports-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="sport-event-card-fixed">
+                            <img src="images/foot.png" alt="UEFA Champions League" class="sport-card-image">
+                            <div class="sport-card-overlay">
+                                <div class="sport-logo-text">UEFA<br>Champions<br>LEAGUE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sport-event-card-fixed">
+                            <img src="images/nba.png" alt="NBA" class="sport-card-image">
+                            <div class="sport-card-overlay">
+                                <div class="sport-logo-text">NBA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sport-event-card-fixed">
+                            <img src="images/cpl.png" alt="Premier League" class="sport-card-image">
+                            <div class="sport-card-overlay">
+                                <div class="sport-logo-text">PREMIER<br>LEAGUE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sport-event-card-fixed">
+                            <img src="images/liga.png" alt="LaLiga" class="sport-card-image">
+                            <div class="sport-card-overlay">
+                                <div class="sport-logo-text">LaLiga</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sport-event-card-fixed">
+                            <img src="images/f1.png" alt="Formula 1" class="sport-card-image">
+                            <div class="sport-card-overlay">
+                                <div class="sport-logo-text">FORMULA 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Streaming Platforms -->
+    <section class="platforms">
+        <div class="container">
+            <h2 class="section-title" data-i18n="platforms.title">Available on Your Favorite Platforms</h2>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon" style="background: linear-gradient(135deg, #1ce783 0%, #26d97f 100%);">
+                        <span>📱</span>
+                    </div>
+                    <span class="platform-name" data-i18n="platforms.android">Android</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span>🍎</span>
+                    </div>
+                    <span class="platform-name" data-i18n="platforms.ios">iOS</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span>💻</span>
+                    </div>
+                    <span class="platform-name" data-i18n="platforms.windows">Windows</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span>🖥️</span>
+                    </div>
+                    <span class="platform-name" data-i18n="platforms.mac">Mac</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span>📺</span>
+                    </div>
+                    <span class="platform-name" data-i18n="platforms.smarttv">Smart TV</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        <span>🎮</span>
+                    </div>
+                    <span class="platform-name" data-i18n="platforms.firestick">Fire Stick</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="features.title">Why Choose AdelSAT?</h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">Premium features designed to elevate your streaming experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>⚡</span>
+                    </div>
+                    <h3 data-i18n="features.feature1Title">Ultra-Fast Streaming</h3>
+                    <p data-i18n="features.feature1Desc">Experience lightning-fast streaming with our premium servers. No buffering, no delays, just pure entertainment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>🎬</span>
+                    </div>
+                    <h3 data-i18n="features.feature2Title">Vast Content Library</h3>
+                    <p data-i18n="features.feature2Desc">Access over 50,000 movies, series, and live TV channels from around the globe in stunning HD and 4K quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>🌍</span>
+                    </div>
+                    <h3 data-i18n="features.feature3Title">Global Coverage</h3>
+                    <p data-i18n="features.feature3Desc">Watch content from USA, UK, Canada, Europe, Asia, and more. Multi-language support for worldwide entertainment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>📱</span>
+                    </div>
+                    <h3 data-i18n="features.feature4Title">Multi-Device Support</h3>
+                    <p data-i18n="features.feature4Desc">Stream on unlimited devices simultaneously. Perfect for the whole family, anytime, anywhere.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>🔒</span>
+                    </div>
+                    <h3 data-i18n="features.feature5Title">Secure & Private</h3>
+                    <p data-i18n="features.feature5Desc">Your privacy is our priority. Encrypted connections and secure payment methods for complete peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>💎</span>
+                    </div>
+                    <h3 data-i18n="features.feature6Title">Premium Quality</h3>
+                    <p data-i18n="features.feature6Desc">Crystal clear 4K, Full HD, and HD streaming. Anti-freeze technology ensures smooth playback every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Section -->
+    <section class="sports">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="sports.title">Live Sports & Premium Events</h2>
+                <p class="section-subtitle" data-i18n="sports.subtitle">Never miss a game with our comprehensive sports coverage</p>
+            </div>
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <div class="sport-overlay">
+                        <h3 data-i18n="sports.soccer">⚽ Soccer</h3>
+                        <p data-i18n="sports.soccerDesc">Premier League, La Liga, Champions League & more</p>
+                    </div>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-overlay">
+                        <h3 data-i18n="sports.basketball">🏀 Basketball</h3>
+                        <p data-i18n="sports.basketballDesc">NBA, EuroLeague, NCAA & international games</p>
+                    </div>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-overlay">
+                        <h3 data-i18n="sports.football">🏈 Football</h3>
+                        <p data-i18n="sports.footballDesc">NFL, College Football & exclusive events</p>
+                    </div>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-overlay">
+                        <h3 data-i18n="sports.tennis">🎾 Tennis</h3>
+                        <p data-i18n="sports.tennisDesc">Grand Slams, ATP, WTA tournaments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="pricing.title">Choose Your Perfect Plan</h2>
+                <p class="section-subtitle" data-i18n="pricing.subtitle">Flexible pricing options to match your entertainment needs</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Basic 1 Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.basic1">Basic 1</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">35</span>
+                            <span class="period" data-i18n="pricing.perYear">/year</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing.basic1Feature1">4,000+ Channels</li>
+                        <li data-i18n="pricing.basic1Feature2">7,500+ Movies</li>
+                        <li data-i18n="pricing.basic1Feature3">1,500+ Series</li>
+                        <li data-i18n="pricing.qualitySupport">SD, HD, FHD, 4K Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="https://t.me/+ZUiodUuNvL0wMTc0" data-i18n="pricing.getStarted" target="_blank">Get Started</a>
+                </div>
+
+                <!-- Basic 2 Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.basic2">Basic 2</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">45</span>
+                            <span class="period" data-i18n="pricing.perYear">/year</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing.basic2Feature1">4,000+ Channels</li>
+                        <li data-i18n="pricing.basic2Feature2">7,900+ Movies</li>
+                        <li data-i18n="pricing.basic2Feature3">2,200+ Series</li>
+                        <li data-i18n="pricing.qualitySupport">SD, HD, FHD, 4K Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="https://t.me/+ZUiodUuNvL0wMTc0" data-i18n="pricing.getStarted" target="_blank">Get Started</a>
+                </div>
+
+                <!-- Medium 1 Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.medium1">Medium 1</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">50</span>
+                            <span class="period" data-i18n="pricing.perYear">/year</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing.medium1Feature1">14,000+ Channels</li>
+                        <li data-i18n="pricing.medium1Feature2">6,500+ Movies</li>
+                        <li data-i18n="pricing.medium1Feature3">14,000+ Series</li>
+                        <li data-i18n="pricing.qualitySupport">SD, HD, FHD, 4K Support</li>
+                    </ul>
+                    <a class="btn btn-primary"href="https://t.me/+ZUiodUuNvL0wMTc0" data-i18n="pricing.getStarted" target="_blank">Get Started</a>
+                </div>
+
+                <!-- Medium 2 Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge" data-i18n="pricing.popular">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.medium2">Medium 2</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">60</span>
+                            <span class="period" data-i18n="pricing.perYear">/year</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing.medium2Feature1">15,000+ Channels</li>
+                        <li data-i18n="pricing.medium2Feature2">9,900+ Movies</li>
+                        <li data-i18n="pricing.medium2Feature3">2,700+ Series</li>
+                        <li data-i18n="pricing.qualitySupport">SD, HD, FHD, 4K Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="https://t.me/+ZUiodUuNvL0wMTc0" data-i18n="pricing.getStarted" target="_blank">Get Started</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pricing.premium">Premium</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">75-85</span>
+                            <span class="period" data-i18n="pricing.perYear">/year</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing.premiumFeature1">24,000+ Channels</li>
+                        <li data-i18n="pricing.premiumFeature2">91,000+ Movies</li>
+                        <li data-i18n="pricing.premiumFeature3">16,500+ Series</li>
+                        <li data-i18n="pricing.qualitySupport">SD, HD, FHD, 4K Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="https://t.me/+ZUiodUuNvL0wMTc0" data-i18n="pricing.getStarted" target="_blank">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <p data-i18n="pricing.paymentTitle">We Accept:</p>
+                <div class="payment-icons">
+                    <span class="payment-icon" data-i18n="pricing.visa">💳 Visa</span>
+                    <span class="payment-icon" data-i18n="pricing.mastercard">💳 Mastercard</span>
+                    <span class="payment-icon" data-i18n="pricing.paypal">🅿️ PayPal</span>
+                    <span class="payment-icon" data-i18n="pricing.bitcoin">₿ Bitcoin</span>
+                    <span class="payment-icon" data-i18n="pricing.crypto">💰 Crypto</span>
+                    <span class="payment-icon" data-i18n="pricing.bankTransfer">🏦 Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="cta.title">Ready to Start Your AdelSAT Experience?</h2>
+                <p data-i18n="cta.subtitle">Join thousands of satisfied customers worldwide. Start with your plan today!</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn btn-primary large" data-i18n="cta.btnPrimary">Get Started</a>
+                    <a href="#contact" class="btn btn-secondary large" data-i18n="cta.btnSecondary">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="AdelSAT Logo" class="logo-image">
+                    </div>
+                    <p data-i18n="footer.description">Premium IPTV streaming service delivering the best entertainment experience worldwide.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="footer.home">Home</a></li>
+                        <li><a href="#features" data-i18n="footer.features">Features</a></li>
+                        <li><a href="#pricing" data-i18n="footer.pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/213792901586?text=Hello%20there!" data-i18n="footer.whatsapp" target="_blank">WhatsApp Support</a></li>
+                        <li><a href="https://t.me/+ZUiodUuNvL0wMTc0" data-i18n="footer.telegram" target="_blank">Telegram Support</a></li>
+                        <li data-i18n="footer.global">🌍 Global Service</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 AdelSAT. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="i18n-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

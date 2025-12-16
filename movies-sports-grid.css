@@ -1,0 +1,119 @@
+/* Simple Section Titles - Italic Style matching best streaming platforms */
+.section-title-simple {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xl);
+    letter-spacing: 1px;
+}
+
+/* Movies Grid - Horizontal Slider */
+/* Movies Grid - Swiper */
+.movies-swiper {
+    width: 100%;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.movies-swiper .swiper-slide {
+    width: auto;
+    height: auto;
+}
+
+.movie-card {
+    position: relative;
+    border-radius: 0; /* NO BORDER RADIUS */
+    overflow: hidden;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.2s ease;
+    /* Fixed width for slider */
+    width: 220px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+}
+
+.movie-card.active-selection {
+    border-color: var(--primary-color);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sports Grid - Swiper */
+.sports-swiper {
+    width: 100%;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.sports-swiper .swiper-slide {
+    width: auto;
+    height: auto;
+}
+
+.sport-event-card-fixed {
+    position: relative;
+    border-radius: 0; /* NO BORDER RADIUS */
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.2s ease;
+    /* Fixed width for slider */
+    width: 300px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+}
+
+.sport-event-card-fixed.active-selection {
+    border-color: var(--primary-color);
+}
+
+.sport-event-card-fixed:hover {
+    transform: scale(1.05);
+}
+
+.sport-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sport-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.sport-logo-text {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments removed - Slider handles all sizes */
+@media (max-width: 768px) {
+    .sport-logo-text {
+        font-size: 1.2rem;
+    }
+}
